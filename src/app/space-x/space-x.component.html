@@ -1,0 +1,17 @@
+<div class="spacex-section">
+  <div class="row">
+    <div *ngFor="let data of spaceXData; let i=index" class="col-md col-sm col-lg overflow-hidden">
+      <div class="bg-white m-10 p-10 center">
+        <img [src]="data?.links?.mission_patch" alt="pic" width="200" height="200"/>
+        <p style="text-align: left;">{{data.mission_name}}#{{i+1}}</p>
+        <ul class="ul-style">
+          <li><b>Mission Ids:</b> </li>
+          <li><b>Launch Year:</b> {{data.launch_year}}</li>
+          <li><b>Successful Launch:</b> {{data.launch_success}}</li>
+          <li><b>Successful Landing:</b> </li>
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</div>
